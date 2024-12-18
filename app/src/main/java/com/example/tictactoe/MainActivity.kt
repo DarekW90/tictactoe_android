@@ -1,8 +1,11 @@
 package com.example.tictactoe
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity // <-- Make sure this import exists
+
+var singleUser = false
 
 class MainActivity : AppCompatActivity() { // <-- Corrected the class inheritance
 
@@ -18,10 +21,14 @@ class MainActivity : AppCompatActivity() { // <-- Corrected the class inheritanc
 
         singlePlayerBtn.setOnClickListener {
             // TODO: Implement single-player logic
+            singleUser = true
+            startActivity(Intent(this, GamePlayActivity::class.java))
         }
 
         multiPlayerBtn.setOnClickListener {
             // TODO: Implement single-player logic
+            singleUser = false
+            startActivity(Intent(this, GamePlayActivity::class.java))
         }
     }
 }
