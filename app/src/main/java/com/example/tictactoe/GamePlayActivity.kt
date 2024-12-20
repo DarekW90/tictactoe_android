@@ -127,7 +127,7 @@ class GamePlayActivity : AppCompatActivity() {
         } else {
             buttonSelected.text = "O"
             audio.start()
-            buttonSelected.setTextColor(Color.parseColor("#D22BB8804"))
+            buttonSelected.setTextColor(Color.parseColor("D22BB8804"))
             activeUser = 1
             player2.add(currCell)
             Handler().postDelayed(Runnable { audio.release() }, 200)
